@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test</title>
+  <link rel="icon" type="image/x-icon" href="https://em-content.zobj.net/thumbs/72/apple/325/beverage-box_1f9c3.png">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Locomotive -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+  <!-- Gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <nav role="navigation">
+    <div id="menuToggle">
+
+      <input type="checkbox" />
+
+      <span class="toggle"></span>
+      <span class="toggle"></span>
+      <span class="toggle"></span>
+
+      <!-- <div id="menu"> -->
+      <ul id="menu">
+        <a class="menu_link" href="#">Lorem</a>
+        <a class="menu_link" href="#">ipsum</a>
+        <a class="menu_link" href="#">dolor</a>
+        <a class="menu_link" href="#">sit amet</a>
+        <a class="menu_link" href="#">consectetur</a>
+      </ul>
+      <!-- </div> -->
+
+      <!-- <div class="bg"></div> -->
+    </div>
+  </nav>
+
+  <!-- <section class="Loop js-loop"> -->
+
+    <!-- Inizio locomotive -->
+    <main class="Loop js-loop">
+      <section data-scroll-section data-textcolor="#2c5d4e" data-bgcolor="#0e7c9e">
+        <div class="content">
+          <h1 data-scroll data-scroll-speed="1">Hey</h1>
+          <p class="sottotitolo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore
+            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.</p>
+          <p class="emoji" data-scroll data-scroll-direction="horizontal" data-scroll-speed="12"
+            style="margin-left: 20vw;">👋</p>
+        </div>
+      </section>
+      <section data-scroll-section data-textcolor="#e9886f" data-bgcolor="#2c5d4e">
+        <div class="content">
+          <h2 data-scroll data-scroll-speed="1">Looks like rain</h2>
+          <p class="sottotitolo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore
+            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.</p>
+          <p class="emoji" data-scroll data-scroll-speed="8">🌧</p>
+        </div>
+      </section>
+      <section data-scroll-section data-textcolor="#d23838" data-bgcolor="#e9886f">
+        <div class="content">
+          <h2 data-scroll data-scroll-speed="1">Have an apple</h2>
+          <p class="sottotitolo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore
+            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.</p>
+          <p class="emoji" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1">🍎</p>
+        </div>
+      </section>
+      <section data-scroll-section data-textcolor="#ecb858" data-bgcolor="#d23838">
+        <div class="content">
+          <h1 data-scroll data-scroll-speed="1">Bye</h1>
+          <p class="sottotitolo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore
+            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.</p>
+          <p class="emoji" data-scroll data-scroll-direction="horizontal" data-scroll-speed="12"
+            style="margin-left: 20vw;">👋</p>
+        </div>
+      </section>
+      <!--
+      These blocks are the same as the first blocks to get that looping illusion going.
+      You need to add clones to fill out a full viewport height.
+      -->
+      <section class="is-clone" data-scroll-section data-textcolor="#2c5d4e" data-bgcolor="#0e7c9e">
+        <div class="content">
+          <h1 data-scroll data-scroll-speed="1">Hey</h1>
+          <p class="sottotitolo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore
+            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.</p>
+          <p class="emoji" data-scroll data-scroll-direction="horizontal" data-scroll-speed="12"
+            style="margin-left: 20vw;">👋</p>
+        </div>
+      </section>
+      <section class="is-clone" data-scroll-section data-textcolor="#e9886f" data-bgcolor="#2c5d4e">
+        <div class="content">
+          <h2 data-scroll data-scroll-speed="1">Looks like rain</h2>
+          <p class="sottotitolo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore
+            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.</p>
+          <p class="emoji" data-scroll data-scroll-speed="8">🌧</p>
+        </div>
+      </section>
+    </main>
+    <!-- Fine locomotive -->
+
+  <!-- </section> -->
+
+  <div class="cursor"></div>
+  
+  <script src="cursor.js"></script>
+  <script src="hover.js"></script>
+  <script src="scroll.js"></script>
+  <script src="loop.js"></script>
+  
+  <!-- <script src="loop.js"></script> -->
+</body>
+
+</html>
