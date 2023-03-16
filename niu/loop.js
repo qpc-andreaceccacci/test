@@ -1,21 +1,11 @@
-// var doc = window.document,
-//   context = doc.querySelector('.js-loop'),
-//   clones = context.querySelectorAll('.is-clone'),
-//   disableScroll = false,
-//   scrollHeight = 0,
-//   scrollPos = 0,
-//   lastHeight = 0,
-//   i = 0;
-
-const context = document.querySelector('.js-loop');
-const content = document.getElementById("content");
-const last = document.getElementById("last").style.height;
-
-
-
-var scrollHeight = 0;
-var scrollPos = 0;
-var lastHeight = 0;
+var doc = window.document,
+  context = doc.querySelector('.js-loop'),
+  clones = context.querySelectorAll('.is-clone'),
+  disableScroll = false,
+  scrollHeight = 0,
+  scrollPos = 0,
+  clonesHeight = 0,
+  i = 0;
 
 function getScrollPos () {
   return (context.pageYOffset || context.scrollTop) - (context.clientTop || 0);
@@ -25,20 +15,20 @@ function setScrollPos (pos) {
   context.scrollTop = pos;
 }
 
-function getLastHeight () {
-  lastHeight = 0;
-  
-  for (i = 0; i < last.length; i += 1) {
-    lastHeight = lastHeight + last[i].offsetHeight;
+function getClonesHeight () {
+  clonesHeight = 0;
+
+  for (i = 0; i < clones.length; i += 1) {
+    clonesHeight = clonesHeight + clones[i].offsetHeight;
   }
 
-  return lastHeight;
+  return clonesHeight;
 }
 
 function reCalc () {
   scrollPos = getScrollPos();
   scrollHeight = context.scrollHeight;
-  lastHeight = getLastHeight();
+  clonesHeight = getClonesHeight();
 
   if (scrollPos <= 0) {
     setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
@@ -49,13 +39,13 @@ function scrollUpdate () {
   if (!disableScroll) {
     scrollPos = getScrollPos();
 
-    if (lastHeight + scrollPos >= scrollHeight) {
+    if (clonesHeight + scrollPos >= scrollHeight) {
       // Scroll to the top when you’ve reached the bottom
       setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
       disableScroll = true;
     } else if (scrollPos <= 0) {
       // Scroll to the bottom when you reach the top
-      setScrollPos(scrollHeight - lastHeight);
+      setScrollPos(scrollHeight - clonesHeight);
       disableScroll = true;
     }
   }
@@ -83,7 +73,7 @@ function init () {
 if (document.readyState !== 'loading') {
   init()
 } else {
-  document.addEventListener('DOMContentLoaded', init, false)
+  doc.addEventListener('DOMContentLoaded', init, false)
 }
 
 // Just for this demo: Center the middle block on page load
